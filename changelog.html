@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YouTube Studio Assistant Changelog - Latest updates, features, and improvements.">
-    <meta name="keywords" content="YouTube, Studio Assistant, Changelog, Updates, Version History">
+    <meta name="description" content="YouTube Studio Assistant Changelog - Latest features, improvements, and bug fixes.">
+    <meta name="keywords" content="YouTube, Studio Assistant, Changelog, Updates, Release Notes">
     <meta name="author" content="Hoybee Creativs">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://youtubestudioassistant.com/changelog.html">
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://youtubestudioassistant.com/changelog.html">
     <meta property="og:title" content="Changelog - YouTube Studio Assistant">
-    <meta property="og:description" content="Latest updates, features, and improvements.">
+    <meta property="og:description" content="Latest features, improvements, and bug fixes.">
     <meta property="og:image" content="https://youtubestudioassistant.com/images/hero-banner.jpg">
     
     <!-- Favicon -->
@@ -32,6 +32,215 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
+    
+    <style>
+        .changelog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .changelog-timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .changelog-timeline:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #ff6b35 0%, #f7931e 100%);
+        }
+        
+        .changelog-item {
+            position: relative;
+            margin-bottom: 60px;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .changelog-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.15);
+        }
+        
+        .changelog-item:before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 40px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #f97316;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #f97316;
+        }
+        
+        .changelog-header {
+            margin-bottom: 30px;
+        }
+        
+        .changelog-version {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .version-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+        
+        .version-badge {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .changelog-date {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .changelog-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .changelog-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .changelog-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .changelog-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .changelog-list li {
+            padding: 12px 0;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .changelog-list li:before {
+            content: "•";
+            color: #f97316;
+            font-weight: bold;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .changelog-list strong {
+            color: #1a1a1a;
+        }
+        
+        .coming-soon {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8d9 100%);
+            border: 2px dashed #f97316;
+        }
+        
+        .coming-soon:before {
+            background: #ffa500;
+            box-shadow: 0 0 0 2px #ffa500;
+        }
+        
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .roadmap-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .roadmap-card:hover {
+            border-color: #f97316;
+            transform: translateY(-5px);
+        }
+        
+        .roadmap-card h4 {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .roadmap-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .changelog-timeline {
+                padding-left: 30px;
+            }
+            
+            .changelog-item {
+                padding: 25px;
+            }
+            
+            .version-number {
+                font-size: 24px;
+            }
+            
+            .changelog-title {
+                font-size: 20px;
+            }
+            
+            .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -56,72 +265,104 @@
     <section class="page-header">
         <div class="container">
             <h1>Changelog</h1>
-            <p>Stay updated with the latest features, improvements, and bug fixes.</p>
+            <p>Stay updated with the latest features, improvements, and bug fixes</p>
         </div>
     </section>
 
-    <!-- Changelog Content -->
-    <section class="content-section">
-        <div class="container">
-            <div class="changelog-wrapper">
-                <!-- Version 1.0.0 -->
-                <div class="changelog-entry">
-                    <div class="version-header">
-                        <h2>Version 1.0.0</h2>
-                        <span class="release-date">December 23, 2025</span>
+    <!-- Changelog Section -->
+    <section class="changelog-container">
+        <div class="changelog-timeline">
+            <!-- Version 1.0.0 -->
+            <div class="changelog-item">
+                <div class="changelog-header">
+                    <div class="changelog-version">
+                        <span class="version-number">Version 1.0.0</span>
                         <span class="version-badge">Latest</span>
                     </div>
-                    <div class="changelog-content">
-                        <h3>🎉 Initial Release</h3>
-                        <p>We're excited to launch YouTube Studio Assistant v1.0.0!</p>
-                        
-                        <h4>✨ New Features</h4>
-                        <ul>
-                            <li><strong>AI Content Generator:</strong> Generate viral titles, descriptions, and tags using Gemini, OpenAI, or DeepSeek</li>
-                            <li><strong>110+ Language Translation:</strong> Automatically translate video metadata to over 110 languages</li>
-                            <li><strong>Thumbnail Generator:</strong> Create eye-catching thumbnails with AI assistance</li>
-                            <li><strong>Batch Translation:</strong> Translate multiple videos at once</li>
-                            <li><strong>Modern UI:</strong> Draggable panels, dark mode support, and beautiful interface</li>
-                            <li><strong>Multiple AI Providers:</strong> Choose between Gemini (free), OpenAI, or DeepSeek</li>
-                        </ul>
-                        
-                        <h4>🎨 Design</h4>
-                        <ul>
-                            <li>Clean and intuitive user interface</li>
-                            <li>Seamless integration with YouTube Studio</li>
-                            <li>Responsive design for all screen sizes</li>
-                            <li>Dark mode support</li>
-                        </ul>
-                        
-                        <h4>🔧 Technical</h4>
-                        <ul>
-                            <li>Built with modern web technologies</li>
-                            <li>Optimized performance</li>
-                            <li>Secure API key management</li>
-                            <li>Privacy-focused design</li>
-                        </ul>
+                    <div class="changelog-date">December 23, 2025</div>
+                    <h2 class="changelog-title">🎉 Initial Release</h2>
+                    <p class="changelog-description">We're excited to launch YouTube Studio Assistant v1.0.0! This is our first public release with all core features ready for YouTube creators worldwide.</p>
+                </div>
+                
+                <div class="changelog-section">
+                    <h3 class="section-title">✨ New Features</h3>
+                    <ul class="changelog-list">
+                        <li><strong>AI Content Generator:</strong> Generate viral titles, descriptions, and tags using Gemini, OpenAI, or DeepSeek</li>
+                        <li><strong>110+ Language Translation:</strong> Automatically translate video metadata to over 110 languages</li>
+                        <li><strong>Thumbnail Generator:</strong> Create eye-catching thumbnails with AI assistance</li>
+                        <li><strong>Batch Translation:</strong> Translate multiple videos at once to save time</li>
+                        <li><strong>Multiple AI Providers:</strong> Choose between Gemini (free), OpenAI, or DeepSeek</li>
+                        <li><strong>Modern UI:</strong> Draggable panels, dark mode support, and beautiful interface</li>
+                    </ul>
+                </div>
+                
+                <div class="changelog-section">
+                    <h3 class="section-title">🎨 Design</h3>
+                    <ul class="changelog-list">
+                        <li>Clean and intuitive user interface</li>
+                        <li>Seamless integration with YouTube Studio</li>
+                        <li>Responsive design for all screen sizes</li>
+                        <li>Dark mode support for comfortable viewing</li>
+                    </ul>
+                </div>
+                
+                <div class="changelog-section">
+                    <h3 class="section-title">🔧 Technical</h3>
+                    <ul class="changelog-list">
+                        <li>Built with modern web technologies</li>
+                        <li>Optimized performance for fast loading</li>
+                        <li>Secure API key management</li>
+                        <li>Privacy-focused design - your data stays with you</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Coming Soon -->
+            <div class="changelog-item coming-soon">
+                <div class="changelog-header">
+                    <div class="changelog-version">
+                        <span class="version-number">Coming Soon</span>
+                        <span class="version-badge" style="background: #ffa500;">Roadmap</span>
+                    </div>
+                    <h2 class="changelog-title">🚀 Planned Features</h2>
+                    <p class="changelog-description">We're constantly working on new features to make YouTube Studio Assistant even better. Here's what's coming next!</p>
+                </div>
+                
+                <div class="roadmap-grid">
+                    <div class="roadmap-card">
+                        <h4>📊 Video Analytics</h4>
+                        <p>Track performance across multiple languages and get insights on your global audience</p>
+                    </div>
+                    
+                    <div class="roadmap-card">
+                        <h4>🔍 SEO Optimizer</h4>
+                        <p>Advanced SEO suggestions for better discoverability and ranking</p>
+                    </div>
+                    
+                    <div class="roadmap-card">
+                        <h4>📅 Content Calendar</h4>
+                        <p>Plan and schedule your content with an integrated calendar</p>
+                    </div>
+                    
+                    <div class="roadmap-card">
+                        <h4>👥 Team Collaboration</h4>
+                        <p>Work together with your team on content creation</p>
+                    </div>
+                    
+                    <div class="roadmap-card">
+                        <h4>📝 Advanced Templates</h4>
+                        <p>Save and reuse your favorite templates for faster workflow</p>
+                    </div>
+                    
+                    <div class="roadmap-card">
+                        <h4>🔗 API Integration</h4>
+                        <p>Connect with other tools and automate your workflow</p>
                     </div>
                 </div>
-
-                <!-- Upcoming Features -->
-                <div class="changelog-entry upcoming">
-                    <div class="version-header">
-                        <h2>Coming Soon</h2>
-                        <span class="version-badge upcoming-badge">Roadmap</span>
-                    </div>
-                    <div class="changelog-content">
-                        <h4>🚀 Planned Features</h4>
-                        <ul>
-                            <li><strong>Video Analytics:</strong> Track performance across multiple languages</li>
-                            <li><strong>SEO Optimizer:</strong> Advanced SEO suggestions for better discoverability</li>
-                            <li><strong>Content Calendar:</strong> Plan and schedule your content</li>
-                            <li><strong>Team Collaboration:</strong> Work together with your team</li>
-                            <li><strong>Advanced Templates:</strong> Save and reuse your favorite templates</li>
-                            <li><strong>API Integration:</strong> Connect with other tools</li>
-                        </ul>
-                        
-                        <p>Have a feature request? <a href="contact.html">Let us know!</a></p>
-                    </div>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <p style="color: #666; margin-bottom: 15px;">Have a feature request or suggestion?</p>
+                    <a href="contact.html" class="btn btn-primary">Let us know!</a>
                 </div>
             </div>
         </div>
