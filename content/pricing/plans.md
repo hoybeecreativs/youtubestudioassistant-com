@@ -1,0 +1,42 @@
+---
+free_plan:
+  title: "Free Trial"
+  price: "$0"
+  period: "/forever"
+  description: "Try all features for free, forever"
+  features:
+    - "Unlimited AI Generations"
+    - "Unlimited Translations"
+    - "All AI Providers (Gemini, OpenAI, DeepSeek)"
+    - "Advanced Title & Description"
+    - "110+ Languages"
+    - "Thumbnail Generator"
+    - "Batch Translation"
+    - "Priority Support"
+    - "All Updates"
+    - "Early Access to New Features"
+    - "Commercial License"
+  button_text: "Get Started Free"
+  button_link: "https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+
+lifetime_plan:
+  title: "Lifetime Access"
+  price: "$5"
+  period: "/one-time payment"
+  description: "Support our development with a one-time payment"
+  badge: "🔥 Best Value"
+  features:
+    - "Unlimited AI Generations"
+    - "Unlimited Translations"
+    - "All AI Providers (Gemini, OpenAI, DeepSeek)"
+    - "Advanced Title & Description"
+    - "110+ Languages"
+    - "Thumbnail Generator"
+    - "Batch Translation"
+    - "Priority Support"
+    - "All Updates"
+    - "Early Access to New Features"
+    - "Commercial License"
+  button_text: "Get Lifetime Access"
+  button_link: "https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+---
