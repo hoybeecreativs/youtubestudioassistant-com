@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YouTube Studio Assistant Changelog - Latest updates, features, and improvements.">
+    <meta name="keywords" content="YouTube, Studio Assistant, Changelog, Updates, Version History">
+    <meta name="author" content="Hoybee Creativs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://youtubestudioassistant.com/changelog.html">
+    <title>Changelog - YouTube Studio Assistant</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://youtubestudioassistant.com/changelog.html">
+    <meta property="og:title" content="Changelog - YouTube Studio Assistant">
+    <meta property="og:description" content="Latest updates, features, and improvements.">
+    <meta property="og:image" content="https://youtubestudioassistant.com/images/hero-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
+    <link rel="apple-touch-icon" href="/images/favicon-192x192.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">YouTube Studio Assistant</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="btn btn-primary btn-small">Download Extension</a>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Changelog</h1>
+            <p>Stay updated with the latest features, improvements, and bug fixes.</p>
+        </div>
+    </section>
+
+    <!-- Changelog Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="changelog-wrapper">
+                <!-- Version 1.0.0 -->
+                <div class="changelog-entry">
+                    <div class="version-header">
+                        <h2>Version 1.0.0</h2>
+                        <span class="release-date">December 23, 2025</span>
+                        <span class="version-badge">Latest</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h3>🎉 Initial Release</h3>
+                        <p>We're excited to launch YouTube Studio Assistant v1.0.0!</p>
+                        
+                        <h4>✨ New Features</h4>
+                        <ul>
+                            <li><strong>AI Content Generator:</strong> Generate viral titles, descriptions, and tags using Gemini, OpenAI, or DeepSeek</li>
+                            <li><strong>110+ Language Translation:</strong> Automatically translate video metadata to over 110 languages</li>
+                            <li><strong>Thumbnail Generator:</strong> Create eye-catching thumbnails with AI assistance</li>
+                            <li><strong>Batch Translation:</strong> Translate multiple videos at once</li>
+                            <li><strong>Modern UI:</strong> Draggable panels, dark mode support, and beautiful interface</li>
+                            <li><strong>Multiple AI Providers:</strong> Choose between Gemini (free), OpenAI, or DeepSeek</li>
+                        </ul>
+                        
+                        <h4>🎨 Design</h4>
+                        <ul>
+                            <li>Clean and intuitive user interface</li>
+                            <li>Seamless integration with YouTube Studio</li>
+                            <li>Responsive design for all screen sizes</li>
+                            <li>Dark mode support</li>
+                        </ul>
+                        
+                        <h4>🔧 Technical</h4>
+                        <ul>
+                            <li>Built with modern web technologies</li>
+                            <li>Optimized performance</li>
+                            <li>Secure API key management</li>
+                            <li>Privacy-focused design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Upcoming Features -->
+                <div class="changelog-entry upcoming">
+                    <div class="version-header">
+                        <h2>Coming Soon</h2>
+                        <span class="version-badge upcoming-badge">Roadmap</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>🚀 Planned Features</h4>
+                        <ul>
+                            <li><strong>Video Analytics:</strong> Track performance across multiple languages</li>
+                            <li><strong>SEO Optimizer:</strong> Advanced SEO suggestions for better discoverability</li>
+                            <li><strong>Content Calendar:</strong> Plan and schedule your content</li>
+                            <li><strong>Team Collaboration:</strong> Work together with your team</li>
+                            <li><strong>Advanced Templates:</strong> Save and reuse your favorite templates</li>
+                            <li><strong>API Integration:</strong> Connect with other tools</li>
+                        </ul>
+                        
+                        <p>Have a feature request? <a href="contact.html">Let us know!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener">Chrome Web Store</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@youtubestudioassistant.com</p>
+                    <p>© 2025 Hoybee Creativs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

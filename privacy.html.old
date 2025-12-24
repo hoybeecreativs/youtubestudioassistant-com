@@ -32,7 +32,6 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/legal.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -62,20 +61,11 @@
     </section>
 
     <!-- Privacy Content -->
-    <section class="legal-container">
-        <div class="legal-intro">
-            <span class="legal-updated">Last updated: December 23, 2025</span>
-            <h2>Your Privacy Matters</h2>
-            <p>We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use YouTube Studio Assistant.</p>
-        </div>
-        
-        <div class="legal-content">
-            <div class="legal-section">
+    <section class="content-section">
+        <div class="container">
+            <div class="legal-wrapper">
                 <h2>1. Introduction</h2>
-                <p>Welcome to YouTube Studio Assistant ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Chrome extension and services.</p>
-            </div>
-            
-            <div class="legal-section">
+                <p>Welcome to YouTube Studio Assistant ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Chrome extension and services.</p>
 
                 <h2>2. Information We Collect</h2>
                 
@@ -101,9 +91,6 @@
                     <li>We do NOT sell your personal information to third parties</li>
                 </ul>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>3. How We Use Your Information</h2>
                 <p>We use the collected information for the following purposes:</p>
                 <ul>
@@ -115,9 +102,6 @@
                     <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
                 </ul>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>4. Data Storage and Security</h2>
                 
                 <h3>4.1 Local Storage</h3>
@@ -134,9 +118,6 @@
                     <li>Limited access to personal data by authorized personnel only</li>
                 </ul>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>5. Third-Party Services</h2>
                 <p>Our extension integrates with the following third-party services:</p>
                 <ul>
@@ -147,15 +128,9 @@
                 </ul>
                 <p>When you use these services through our extension, your data is subject to their respective privacy policies.</p>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>6. Data Retention</h2>
                 <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. You can request deletion of your account and associated data at any time by contacting us at support@youtubestudioassistant.com.</p>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>7. Your Rights</h2>
                 <p>Depending on your location, you may have the following rights:</p>
                 <ul>
@@ -168,27 +143,15 @@
                 </ul>
                 <p>To exercise these rights, please contact us at support@youtubestudioassistant.com.</p>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>8. Children's Privacy</h2>
                 <p>Our services are not intended for users under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.</p>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>9. International Data Transfers</h2>
                 <p>Your information may be transferred to and processed in countries other than your country of residence. We ensure that appropriate safeguards are in place to protect your data in accordance with this Privacy Policy and applicable laws.</p>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>10. Changes to This Privacy Policy</h2>
                 <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically.</p>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>11. Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
                 <ul>
@@ -197,9 +160,6 @@
                     <li><strong>Website:</strong> <a href="https://youtubestudioassistant.com">https://youtubestudioassistant.com</a></li>
                 </ul>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>12. GDPR Compliance</h2>
                 <p>For users in the European Economic Area (EEA), we comply with the General Data Protection Regulation (GDPR). Our lawful basis for processing your personal data includes:</p>
                 <ul>
@@ -209,9 +169,6 @@
                     <li><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests</li>
                 </ul>
 
-            </div>
-            
-            <div class="legal-section">
                 <h2>13. California Privacy Rights (CCPA)</h2>
                 <p>For California residents, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
                 <ul>
@@ -222,12 +179,6 @@
                     <li>Right to non-discrimination for exercising CCPA rights</li>
                 </ul>
                 <p>We do not sell your personal information.</p>
-            </div>
-            
-            <div class="legal-contact">
-                <h3>Questions About Privacy?</h3>
-                <p>Email: <a href="mailto:support@youtubestudioassistant.com">support@youtubestudioassistant.com</a></p>
-                <p>Company: Hoybee Creativs</p>
             </div>
         </div>
     </section>

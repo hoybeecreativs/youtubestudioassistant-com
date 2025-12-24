@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YouTube Studio Assistant Pricing - Simple and transparent pricing for YouTube creators. Start free or get lifetime access.">
+    <meta name="keywords" content="YouTube, Studio Assistant, Pricing, Free Trial, Lifetime Access">
+    <meta name="author" content="Hoybee Creativs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://youtubestudioassistant.com/pricing.html">
+    <title>Pricing - YouTube Studio Assistant</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://youtubestudioassistant.com/pricing.html">
+    <meta property="og:title" content="Pricing - YouTube Studio Assistant">
+    <meta property="og:description" content="Simple and transparent pricing for YouTube creators.">
+    <meta property="og:image" content="https://youtubestudioassistant.com/images/hero-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
+    <link rel="apple-touch-icon" href="/images/favicon-192x192.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <style>
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(249, 115, 22, 0.2);
+            border-color: #f97316;
+        }
+        
+        .pricing-card.featured {
+            border-color: #f97316;
+            box-shadow: 0 10px 40px rgba(249, 115, 22, 0.15);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #f97316;
+            margin: 20px 0;
+        }
+        
+        .pricing-price span {
+            font-size: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .pricing-description {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            flex-grow: 1;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            color: #f97316;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        
+        .pricing-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        }
+        
+        .pricing-cta.secondary {
+            background: white;
+            color: #f97316;
+            border: 2px solid #f97316;
+        }
+        
+        .pricing-cta.secondary:hover {
+            background: #f97316;
+            color: white;
+        }
+        
+        .faq-section {
+            margin-top: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .pricing-title {
+                font-size: 24px;
+            }
+            
+            .pricing-price {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">YouTube Studio Assistant</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="btn btn-primary btn-small">Download Extension</a>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the plan that's right for you. Start free, upgrade anytime.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-container">
+        <div class="pricing-grid">
+            <!-- Free Trial Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h2 class="pricing-title">Free Trial</h2>
+                    <div class="pricing-price">
+                        $0 <span>/forever</span>
+                    </div>
+                    <p class="pricing-description">Perfect for trying out the extension and exploring features</p>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li>AI Content Generator (Limited)</li>
+                    <li>10 Translations per day</li>
+                    <li>Gemini AI Support</li>
+                    <li>Basic Title & Description</li>
+                    <li>20+ Languages</li>
+                    <li>Community Support</li>
+                </ul>
+                
+                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="pricing-cta secondary">Get Started Free</a>
+            </div>
+            
+            <!-- Lifetime Plan -->
+            <div class="pricing-card featured">
+                <div class="pricing-badge">🔥 Best Value</div>
+                <div class="pricing-header">
+                    <h2 class="pricing-title">Lifetime Access</h2>
+                    <div class="pricing-price">
+                        $99 <span>/one-time payment</span>
+                    </div>
+                    <p class="pricing-description">Pay once, use forever with all premium features</p>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li>Unlimited AI Generations</li>
+                    <li>Unlimited Translations</li>
+                    <li>All AI Providers (Gemini, OpenAI, DeepSeek)</li>
+                    <li>Advanced Title & Description</li>
+                    <li>110+ Languages</li>
+                    <li>Thumbnail Generator</li>
+                    <li>Batch Translation</li>
+                    <li>Priority Support Forever</li>
+                    <li>Lifetime Updates</li>
+                    <li>Early Access to New Features</li>
+                    <li>No Monthly Fees</li>
+                    <li>Commercial License</li>
+                </ul>
+                
+                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="pricing-cta">Get Lifetime Access</a>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does the Free Trial work?</div>
+                <div class="faq-answer">The Free Trial is completely free forever with limited features. You can use it to test the extension and see if it fits your workflow. No credit card required.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's included in Lifetime Access?</div>
+                <div class="faq-answer">Lifetime Access includes all premium features, unlimited AI generations, all AI providers, 110+ languages, thumbnail generator, batch translation, priority support, and all future updates - forever!</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What payment methods do you accept?</div>
+                <div class="faq-answer">We accept all major credit cards, PayPal, and various local payment methods through our secure payment processor.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I get a refund?</div>
+                <div class="faq-answer">Yes! We offer a 30-day money-back guarantee for the Lifetime plan. If you're not satisfied, contact us at support@youtubestudioassistant.com for a full refund.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do I need to provide my own API keys?</div>
+                <div class="faq-answer">For the Free Trial with Gemini AI, no API key is needed. For Lifetime Access with OpenAI or DeepSeek, you'll need to provide your own API keys for those specific providers.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is there a monthly subscription option?</div>
+                <div class="faq-answer">Currently, we only offer Free Trial and Lifetime Access. The Lifetime plan is our best value - pay once and use forever without recurring fees!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener">Chrome Web Store</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@youtubestudioassistant.com</p>
+                    <p>© 2025 Hoybee Creativs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

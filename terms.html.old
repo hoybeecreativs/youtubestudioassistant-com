@@ -32,7 +32,6 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/legal.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -62,21 +61,12 @@
     </section>
 
     <!-- Terms Content -->
-    <section class="legal-container">
-        <div class="legal-intro">
-            <span class="legal-updated">Last updated: December 23, 2025</span>
-            <h2>Terms of Service</h2>
-            <p>Please read these terms carefully before using YouTube Studio Assistant. By using our service, you agree to be bound by these terms.</p>
-        </div>
-        
-        <div class="legal-content">
-            <div class="legal-section">
+    <section class="content-section">
+        <div class="container">
+            <div class="legal-wrapper">
                 <h2>1. Acceptance of Terms</h2>
                 <p>By accessing or using YouTube Studio Assistant ("the Extension," "our Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Service.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>2. Description of Service</h2>
                 <p>YouTube Studio Assistant is a Chrome browser extension that provides AI-powered tools for YouTube content creators, including:</p>
                 <ul>
@@ -87,9 +77,6 @@
                     <li>Integration with multiple AI providers</li>
                 </ul>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>3. User Accounts and Registration</h2>
                 
                 <h3>3.1 Account Creation</h3>
@@ -104,9 +91,6 @@
                 <h3>3.2 Account Eligibility</h3>
                 <p>You must be at least 13 years old to use our Service. If you are under 18, you must have parental consent.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>4. Subscription and Payment</h2>
                 
                 <h3>4.1 Free Plan</h3>
@@ -129,9 +113,6 @@
                 <h3>4.4 Refund Policy</h3>
                 <p>We offer a 30-day money-back guarantee for all paid plans. To request a refund, contact us at support@youtubestudioassistant.com.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>5. User Responsibilities</h2>
                 
                 <h3>5.1 Acceptable Use</h3>
@@ -156,9 +137,6 @@
                     <li>Obtaining necessary rights for any content you create</li>
                 </ul>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>6. API Keys and Third-Party Services</h2>
                 
                 <h3>6.1 Your API Keys</h3>
@@ -173,9 +151,6 @@
                 <h3>6.2 Third-Party Services</h3>
                 <p>Our Service integrates with third-party services. Your use of these services is subject to their respective terms and conditions.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>7. Intellectual Property</h2>
                 
                 <h3>7.1 Our Rights</h3>
@@ -189,9 +164,6 @@
                 <h3>7.2 Your Rights</h3>
                 <p>You retain all rights to the content you create using our Service. We do not claim ownership of your generated content.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>8. Disclaimers and Limitations of Liability</h2>
                 
                 <h3>8.1 Service "As Is"</h3>
@@ -215,9 +187,6 @@
                     <li>Damages exceeding the amount you paid for the Service in the past 12 months</li>
                 </ul>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>9. Termination</h2>
                 
                 <h3>9.1 By You</h3>
@@ -237,9 +206,6 @@
                     <li>Required by law</li>
                 </ul>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>10. Changes to Terms</h2>
                 <p>We reserve the right to modify these Terms at any time. We will notify users of material changes by:</p>
                 <ul>
@@ -249,15 +215,9 @@
                 </ul>
                 <p>Continued use of the Service after changes constitutes acceptance of the new Terms.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>11. Privacy</h2>
                 <p>Your use of the Service is also governed by our <a href="privacy.html">Privacy Policy</a>. Please review it to understand how we collect and use your information.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>12. Dispute Resolution</h2>
                 
                 <h3>12.1 Governing Law</h3>
@@ -269,9 +229,6 @@
                 <h3>12.3 Class Action Waiver</h3>
                 <p>You agree to resolve disputes on an individual basis and waive the right to participate in class actions.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>13. Miscellaneous</h2>
                 
                 <h3>13.1 Entire Agreement</h3>
@@ -286,9 +243,6 @@
                 <h3>13.4 Assignment</h3>
                 <p>You may not assign or transfer these Terms without our written consent. We may assign our rights and obligations without restriction.</p>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>14. Contact Information</h2>
                 <p>For questions about these Terms, please contact us:</p>
                 <ul>
@@ -297,17 +251,8 @@
                     <li><strong>Website:</strong> <a href="https://youtubestudioassistant.com">https://youtubestudioassistant.com</a></li>
                 </ul>
 
-                </div>
-            
-            <div class="legal-section">
                 <h2>15. Acknowledgment</h2>
                 <p>By using YouTube Studio Assistant, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
-            </div>
-            
-            <div class="legal-contact">
-                <h3>Questions About These Terms?</h3>
-                <p>Email: <a href="mailto:support@youtubestudioassistant.com">support@youtubestudioassistant.com</a></p>
-                <p>Company: Hoybee Creativs</p>
             </div>
         </div>
     </section>
