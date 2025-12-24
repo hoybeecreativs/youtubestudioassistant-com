@@ -1,0 +1,101 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Story Title", name: "story_title", widget: "string", default: "Our Story"}
+          - {label: "Story Content", name: "story_content", widget: "markdown"}
+          - {label: "Mission", name: "mission", widget: "text"}
+          - {label: "Vision", name: "vision", widget: "text"}
+          - label: "Problems We Solve"
+            name: "problems"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "Company Info"
+            name: "company_info"
+            widget: "object"
+            fields:
+              - {label: "Company Name", name: "company_name", widget: "string"}
+              - {label: "Founded", name: "founded", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Industry", name: "industry", widget: "string"}
+              - {label: "Product Stage", name: "product_stage", widget: "string"}
+              - {label: "Target Market", name: "target_market", widget: "string"}
+              - {label: "Website", name: "website", widget: "string"}
+              - {label: "Contact Email", name: "contact_email", widget: "string"}
+
+  - name: "team"
+    label: "Team Members"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Role", name: "role", widget: "string"}
+      - {label: "Avatar Letter", name: "avatar_letter", widget: "string", hint: "Single letter for avatar"}
+      - {label: "Bio", name: "bio", widget: "text"}
+      - label: "Expertise"
+        name: "expertise"
+        widget: "list"
+        field: {label: "Skill", name: "skill", widget: "string"}
+      - label: "Responsibilities"
+        name: "responsibilities"
+        widget: "list"
+        field: {label: "Responsibility", name: "responsibility", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Order", name: "order", widget: "number", default: 1, hint: "Display order (1, 2, 3...)"}
+
+  - name: "features"
+    label: "Features"
+    folder: "content/features"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Icon", name: "icon", widget: "string", hint: "Emoji or icon character"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Order", name: "order", widget: "number", default: 1}
+      - {label: "Featured", name: "featured", widget: "boolean", default: true}
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "content/settings/general.md"
+        fields:
+          - {label: "Site Title", name: "site_title", widget: "string"}
+          - {label: "Site Description", name: "site_description", widget: "text"}
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "text"}
+          - {label: "CTA Text", name: "cta_text", widget: "string"}
+          - {label: "CTA Link", name: "cta_link", widget: "string"}
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+          - label: "Social Links"
+            name: "social_links"
+            widget: "object"
+            fields:
+              - {label: "GitHub", name: "github", widget: "string", required: false}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+              - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+              - {label: "Email", name: "email", widget: "string"}
