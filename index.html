@@ -22,7 +22,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="/" class="logo">YouTube Studio Assistant</a>
+            <a href="/" class="logo"><img src="images/favicon.png" alt="Logo" class="logo-icon">YouTube Studio Assistant</a>
             
             <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <span></span>
@@ -32,10 +32,11 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#features">Features</a></li>
+                <li><a href="product.html">Product</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#" class="nav-cta">Download Extension</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" class="nav-cta">Download Extension</a></li>
             </ul>
         </div>
     </nav>
@@ -49,7 +50,7 @@
                     <p>The ultimate AI assistant for creators. Generate viral titles, optimize descriptions, and translate to 110+ languages instantly.</p>
                     
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary">Add to Chrome - It's Free</a>
+                        <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" class="btn btn-primary">Add to Chrome - It's Free</a>
                         <a href="#features" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
@@ -133,6 +134,54 @@
         </div>
     </section>
 
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>Real screenshots from YouTube Studio Assistant</p>
+            </div>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="images/Generate Title.PNG" alt="Generate Title with AI">
+                    <h4>🎯 Generate Viral Titles</h4>
+                    <p>AI generates multiple title options optimized for clicks and SEO</p>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="images/Generate Description.PNG" alt="Generate Description">
+                    <h4>📝 Auto Description</h4>
+                    <p>Create engaging descriptions with keywords and CTAs</p>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="images/Generate Tags.PNG" alt="Generate Tags">
+                    <h4>🏷️ Smart Tags</h4>
+                    <p>Generate relevant tags to boost discoverability</p>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="images/Auto Translate Title & Description.PNG" alt="Auto Translate">
+                    <h4>🌍 Auto Translation</h4>
+                    <p>Translate to any language with one click</p>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="images/Multi Languange Auto Translation.PNG" alt="Multi Language Translation">
+                    <h4>⚡ Bulk Translation</h4>
+                    <p>Translate to multiple languages simultaneously</p>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="images/setting.PNG" alt="Settings">
+                    <h4>⚙️ Easy Settings</h4>
+                    <p>Configure AI providers and preferences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Section -->
     <section class="features" style="background: linear-gradient(135deg, #ff6b3510 0%, #f7931e10 100%);">
         <div class="container">
@@ -168,7 +217,7 @@
         <div class="container">
             <h2>Start Growing Today</h2>
             <p>Join thousands of creators who are saving time and reaching more viewers with YouTube Studio Assistant.</p>
-            <a href="#" class="btn btn-primary">Download Extension - It's Free</a>
+            <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" class="btn btn-primary">Download Extension - It's Free</a>
         </div>
     </section>
 
@@ -187,37 +236,64 @@
                         <li><a href="#features">Features</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="team.html">Team</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Changelog</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg">Get Extension</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
                         <li><a href="contact.html">Support</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Chrome Web Store</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg">Chrome Web Store</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 PT. Hoybee Creativs Digital. All rights reserved. | Developed by <a href="https://hoybeecreatavs.com" style="color: #f97316;">Hoybee Creativs</a></p>
+                <p>&copy; 2025 PT. Hoybee Creativs Digital. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Screenshot">
+    </div>
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        document.querySelectorAll('.screenshot-card img').forEach(img => {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>

@@ -22,7 +22,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="/" class="logo">YouTube Studio Assistant</a>
+            <a href="/" class="logo"><img src="images/favicon.png" alt="Logo" class="logo-icon">YouTube Studio Assistant</a>
             
             <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <span></span>
@@ -32,10 +32,11 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html#features">Features</a></li>
+                <li><a href="product.html">Product</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="#" class="nav-cta">Download Extension</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" class="nav-cta">Download Extension</a></li>
             </ul>
         </div>
     </nav>
@@ -90,15 +91,7 @@
                 
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-                        <!-- Netlify Form Detection -->
-                        <input type="hidden" name="form-name" value="contact">
-                        
-                        <!-- Honeypot for spam protection -->
-                        <p class="hidden">
-                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                        </p>
-                        
+                    <form class="contact-form" onsubmit="sendEmail(event)">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -113,12 +106,12 @@
                             <label for="subject">Subject *</label>
                             <select id="subject" name="subject" required>
                                 <option value="">Select a subject</option>
-                                <option value="support">Technical Support</option>
-                                <option value="feature">Feature Request</option>
-                                <option value="bug">Bug Report</option>
-                                <option value="partnership">Partnership Inquiry</option>
-                                <option value="feedback">General Feedback</option>
-                                <option value="other">Other</option>
+                                <option value="Technical Support">Technical Support</option>
+                                <option value="Feature Request">Feature Request</option>
+                                <option value="Bug Report">Bug Report</option>
+                                <option value="Partnership Inquiry">Partnership Inquiry</option>
+                                <option value="General Feedback">General Feedback</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         
@@ -129,7 +122,7 @@
                         
                         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                         
-                        <p class="form-note">* Required fields</p>
+                        <p class="form-note">* This will open your email client</p>
                     </form>
                 </div>
             </div>
@@ -193,37 +186,49 @@
                         <li><a href="index.html#features">Features</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="team.html">Team</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Changelog</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg">Get Extension</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
                         <li><a href="contact.html">Support</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Chrome Web Store</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg">Chrome Web Store</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 PT. Hoybee Creativs Digital. All rights reserved. | Developed by <a href="https://hoybeecreatavs.com" style="color: #f97316;">Hoybee Creativs</a></p>
+                <p>&copy; 2025 PT. Hoybee Creativs Digital. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        function sendEmail(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            const mailtoLink = `mailto:support@youtubestudioassistant.com?subject=${encodeURIComponent('[YouTube Studio Assistant] ' + subject)}&body=${body}`;
+            
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>
