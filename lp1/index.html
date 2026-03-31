@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Studio Assistant — Asisten AI untuk Kreator YouTube Indonesia</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- SEO Primary Meta Tags -->
+    <meta name="description"
+        content="Tingkatkan pertumbuhan YouTube-mu dengan AI. Generate judul viral, deskripsi SEO-optimized, buat thumbnail menarik, dan terjemahkan ke 110+ bahasa secara instan. Didukung 6 AI provider. Free trial 7 hari.">
+    <meta name="keywords"
+        content="youtube studio assistant, youtube AI tool, generate judul youtube, deskripsi SEO youtube, terjemahan otomatis youtube, chrome extension youtube, youtube creator tool indonesia, AI content generator youtube, thumbnail generator youtube, batch translation youtube">
+    <meta name="author" content="PT. Hoybee Creativs Digital">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://youtubestudioassistant.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://youtubestudioassistant.com/">
+    <meta property="og:title" content="YouTube Studio Assistant — Asisten AI #1 untuk Kreator YouTube">
+    <meta property="og:description"
+        content="Generate judul viral, deskripsi SEO, thumbnail menarik & terjemahkan ke 110+ bahasa. Didukung 6 AI provider. Free trial 7 hari!">
+    <meta property="og:image" content="https://youtubestudioassistant.com/images/hero_banner_id.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="YouTube Studio Assistant">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://youtubestudioassistant.com/">
+    <meta name="twitter:title" content="YouTube Studio Assistant — Asisten AI #1 untuk Kreator YouTube">
+    <meta name="twitter:description"
+        content="Generate judul viral, deskripsi SEO, thumbnail menarik & terjemahkan ke 110+ bahasa. Didukung 6 AI provider. Free trial 7 hari!">
+    <meta name="twitter:image" content="https://youtubestudioassistant.com/images/hero_banner_id.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "YouTube Studio Assistant",
+        "description": "Extension Chrome bertenaga AI untuk generate judul viral, deskripsi SEO-optimized, buat thumbnail, dan terjemahkan video ke 110+ bahasa langsung dari YouTube Studio.",
+        "url": "https://youtubestudioassistant.com/",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR",
+            "description": "Free Trial 7 Hari"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "3",
+            "bestRating": "5"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "PT. Hoybee Creativs Digital"
+        },
+        "inLanguage": "id",
+        "featureList": "AI Content Generator, 110+ Language Translation, Thumbnail Generator, SEO Optimization, Batch Processing, 6 AI Providers"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#050507',
+                            surface: '#0E101A',
+                            border: '#1F2937',
+                            primary: '#FF0033',
+                            secondary: '#FF4D6A',
+                            accent: '#FF1A4A',
+                            text: '#F3F4F6',
+                            muted: '#9CA3AF'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 15s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 7s ease-in-out infinite 1s',
+                        'pulse-slow': 'pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'spin-reverse-slow': 'spin 25s linear infinite reverse',
+                        'shimmer': 'shimmer 2.5s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            from: { backgroundPosition: '0 0' },
+                            to: { backgroundPosition: '-200% 0' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050507;
+            color: #F3F4F6;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050507;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4B5563;
+        }
+
+        .glass {
+            background: rgba(14, 16, 26, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .animate-text-gradient {
+            background-size: 200% auto;
+            animation: textShine 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textShine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .spotlight-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .spotlight-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.08), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .spotlight-card:hover::before {
+            opacity: 1;
+        }
+
+        .spotlight-card:hover {
+            border-color: rgba(255, 0, 51, 0.5);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .magnetic-wrap {
+            display: inline-block;
+        }
+
+        .btn-shimmer {
+            background: linear-gradient(90deg, #FF0033, #FF4D6A, #FF0033);
+            background-size: 200% auto;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Lightbox */
+        .lightbox-trigger {
+            cursor: zoom-in;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lightbox-trigger:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(255, 0, 51, 0.2);
+        }
+
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            cursor: zoom-out;
+            padding: 2rem;
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-overlay img {
+            max-width: 95vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 0.75rem;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-overlay.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 0, 51, 0.5);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] animate-blob"></div>
+        <div
+            class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px] animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[150px]">
+        </div>
+        <div class="bg-grid-pattern absolute inset-0 opacity-30"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2 group cursor-pointer">
+                    <div
+                        class="w-8 h-8 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(255,0,51,0.4)] group-hover:scale-110 transition-transform">
+                        <span class="text-white font-display font-bold text-sm">▶</span>
+                    </div>
+                    <span class="font-display font-bold text-lg tracking-tight text-white">Youtube Studio <span
+                            class="text-brand-primary">Assistant</span></span>
+                </div>
+                <div class="hidden md:flex gap-8 text-sm font-medium text-brand-muted">
+                    <a href="#features" class="hover:text-white transition-colors">Fitur</a>
+                    <a href="#how-it-works" class="hover:text-white transition-colors">Cara Kerja</a>
+                    <a href="#comparison" class="hover:text-white transition-colors">Bandingkan</a>
+                </div>
+                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+                    target="_blank"
+                    class="bg-brand-primary hover:bg-brand-secondary text-white text-sm font-bold px-5 py-2.5 rounded-full border border-brand-primary/50 transition-all hover:shadow-[0_0_20px_rgba(255,0,51,0.3)]">
+                    Download Extension
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-40 pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Decorative Rings -->
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-brand-primary/20 rounded-full animate-spin-slow pointer-events-none">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-dashed border-brand-secondary/20 rounded-full animate-spin-reverse-slow pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+
+            <div
+                class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-primary/30 bg-brand-primary/10 mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-brand-primary text-xs font-bold tracking-widest uppercase">🎁 FREE TRIAL 7 HARI — Coba
+                    Sekarang</span>
+            </div>
+
+            <h1
+                class="reveal delay-100 font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
+                Percepat Pertumbuhan<br>
+                <span
+                    class="animate-text-gradient bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary">Channel
+                    YouTube-mu ⚡</span>
+            </h1>
+
+            <div class="reveal delay-200 max-w-2xl mx-auto mb-12">
+                <p class="text-lg md:text-xl text-brand-muted font-light">
+                    Asisten AI terbaik untuk kreator. Generate judul viral, optimalkan deskripsi, buat thumbnail
+                    menarik, dan terjemahkan ke 110+ bahasa secara instan. Didukung 6 provider AI. Langsung dari YouTube
+                    Studio.
+                </p>
+            </div>
+
+            <div class="reveal delay-300 flex flex-col items-center justify-center space-y-5 max-w-md mx-auto">
+                <div class="magnetic-wrap">
+                    <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+                        target="_blank" id="hero-cta"
+                        class="btn-shimmer relative group flex items-center justify-center text-white text-lg font-bold py-4 px-10 rounded-xl shadow-[0_0_40px_-10px_rgba(255,0,51,0.4)] transition-all hover:shadow-[0_0_60px_-15px_rgba(255,0,51,0.6)] overflow-hidden whitespace-nowrap">
+                        <span class="relative z-10">Coba Gratis 7 Hari</span>
+                        <svg class="w-5 h-5 ml-2 relative z-10 group-hover:translate-x-1 transition-transform"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4 text-xs text-brand-muted">
+                    <span class="flex items-center gap-1"><svg class="w-3 h-3 text-green-500" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Free Trial 7 Hari</span>
+                    <span class="w-1 h-1 bg-white/20 rounded-full"></span>
+                    <span class="flex items-center gap-1"><svg class="w-3 h-3 text-green-500" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Privasi Terjaga</span>
+                    <span class="w-1 h-1 bg-white/20 rounded-full"></span>
+                    <span class="flex items-center gap-1"><svg class="w-3 h-3 text-green-500" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> 110+ Bahasa</span>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="reveal delay-500 mt-20 max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-display font-bold text-white">110+</div>
+                    <div class="text-xs text-brand-muted mt-1">Bahasa Didukung</div>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-display font-bold text-white">6</div>
+                    <div class="text-xs text-brand-muted mt-1">Provider AI</div>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-display font-bold text-white">10<span class="text-lg">mnt</span></div>
+                    <div class="text-xs text-brand-muted mt-1">Waktu Dihemat/Video</div>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-display font-bold text-white">∞</div>
+                    <div class="text-xs text-brand-muted mt-1">Generate Tak Terbatas</div>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="reveal delay-700 mt-16 relative mx-auto max-w-5xl">
+                <div class="glass rounded-2xl p-2 border border-white/10 shadow-2xl shadow-brand-primary/10">
+                    <img src="../images/hero_banner_id.png"
+                        alt="YouTube Studio Assistant — The Ultimate AI Extension for YouTube Creators"
+                        class="w-full rounded-xl" loading="lazy">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- BRIDGE 1 -->
+    <section class="py-20 border-y border-white/5 bg-white/[0.01]">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="reveal">
+                <p class="text-xl md:text-2xl font-display text-white leading-relaxed">
+                    Kamu punya konten bagus di YouTube, tapi <span class="text-brand-muted italic">berjuang nulis judul
+                        yang menarik, deskripsi yang SEO-friendly, dan menerjemahkan video ke banyak bahasa?</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section id="problem" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative reveal">
+                    <div
+                        class="relative glass rounded-3xl border border-red-500/20 animate-float-delayed overflow-hidden">
+                        <img src="../images/generate_title.png" alt="AI Generate Title di YouTube Studio"
+                            class="w-full rounded-3xl" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 reveal">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-8">
+                        "Jangan Biarkan <span class="text-red-500">Proses Manual</span> Menghambat Channel-mu"
+                    </h2>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-5 items-start group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-500 shrink-0 border border-red-500/20 group-hover:scale-110 transition-transform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Judul & Deskripsi Kurang Menarik</h3>
+                                <p class="text-brand-muted leading-relaxed">Nulis judul yang clickable dan deskripsi
+                                    yang SEO-friendly untuk setiap video memakan waktu berjam-jam. Hasilnya pun sering
+                                    kurang optimal.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5 items-start group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-500 shrink-0 border border-red-500/20 group-hover:scale-110 transition-transform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Terjemahan yang Menguras Waktu</h3>
+                                <p class="text-brand-muted leading-relaxed">Menerjemahkan metadata video ke banyak
+                                    bahasa secara manual? Itu bisa memakan waktu berhari-hari. Padahal audiens global
+                                    menunggumu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARGET AUDIENCE -->
+    <section class="py-24 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="reveal text-3xl md:text-5xl font-display font-bold text-white mb-16">Ini Cocok Untuk Siapa?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="reveal spotlight-card glass p-8 rounded-3xl text-center border-t-4 border-brand-primary">
+                    <div
+                        class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary text-3xl">
+                        🎬
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">YouTuber Pemula</h3>
+                    <p class="text-brand-muted text-sm">Baru mulai dan butuh bantuan buat judul yang menarik, deskripsi
+                        profesional, dan tag yang tepat dalam hitungan detik.</p>
+                </div>
+
+                <div
+                    class="reveal delay-100 spotlight-card glass p-8 rounded-3xl text-center border-t-4 border-brand-secondary">
+                    <div
+                        class="w-16 h-16 bg-brand-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-secondary text-3xl">
+                        🌍
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Kreator Multi-Bahasa</h3>
+                    <p class="text-brand-muted text-sm">Ingin menjangkau audiens global tapi kesulitan menerjemahkan
+                        metadata video ke banyak bahasa secara manual.</p>
+                </div>
+
+                <div
+                    class="reveal delay-200 spotlight-card glass p-8 rounded-3xl text-center border-t-4 border-blue-500">
+                    <div
+                        class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-500 text-3xl">
+                        🚀
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Content Creator Sibuk</h3>
+                    <p class="text-brand-muted text-sm">Punya banyak video tapi waktu terbatas. Butuh tools batch
+                        processing untuk upload massal yang efisien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES / SOLUTION SECTION (Bento Grid) -->
+    <section id="features" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+            <h2 class="reveal text-4xl md:text-6xl font-display font-bold text-white mb-6">
+                Semua yang Kamu Butuhkan <span class="text-brand-primary">dalam Satu Extension</span>
+            </h2>
+            <p class="reveal delay-100 text-xl text-brand-muted max-w-3xl mx-auto">
+                Tools canggih yang dirancang untuk membantu kreator menjangkau audiens global dan menghemat jam kerja
+                setiap minggunya.
+            </p>
+        </div>
+
+        <!-- BENTO GRID -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[700px]">
+
+                <!-- Main Feature -->
+                <div
+                    class="reveal spotlight-card md:col-span-2 md:row-span-2 p-8 glass rounded-3xl flex flex-col justify-between group cursor-default animate-float">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20 text-2xl">
+                            🤖
+                        </div>
+                        <span
+                            class="px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-bold border border-brand-primary/20">6
+                            AI PROVIDERS</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">AI Content Generator</h3>
+                        <p class="text-brand-muted mb-6">Generate judul viral, deskripsi menarik, dan tag SEO-optimized
+                            dalam hitungan detik. Didukung oleh 6 provider AI: Pollinations.ai (gratis!), Groq,
+                            OpenRouter, Gemini, OpenAI, dan DeepSeek.</p>
+                        <div class="mt-4 rounded-xl overflow-hidden border border-white/5">
+                            <img src="../images/generate_title.png" alt="AI Generate Title" class="w-full" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal spotlight-card md:col-span-2 p-8 glass rounded-3xl group animate-float-delayed">
+                    <div class="flex items-start gap-6">
+                        <div
+                            class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 border border-blue-500/20 shrink-0 group-hover:scale-110 transition-transform text-2xl">
+                            🌐
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Terjemahan 110+ Bahasa</h3>
+                            <p class="text-sm text-brand-muted">Terjemahkan metadata video ke lebih dari 110 bahasa
+                                secara otomatis. Jangkau audiens global dengan satu klik.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 rounded-xl overflow-hidden border border-white/5">
+                        <img src="../images/auto_translate.png" alt="Auto Translate Title & Description" class="w-full"
+                            loading="lazy">
+                    </div>
+                </div>
+
+                <div
+                    class="reveal spotlight-card md:col-span-1 p-8 glass rounded-3xl group flex flex-col justify-between animate-float">
+                    <div
+                        class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400 mb-4 group-hover:rotate-12 transition-transform text-xl">
+                        🎨
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Thumbnail AI</h3>
+                        <p class="text-xs text-brand-muted mt-2">Buat thumbnail yang menarik perhatian dengan saran
+                            desain berbasis AI.</p>
+                    </div>
+                    <div class="mt-3 rounded-xl overflow-hidden border border-white/5">
+                        <img src="../images/thumnail.jpg" alt="Thumbnail Generator" class="w-full" loading="lazy">
+                    </div>
+                </div>
+
+                <div
+                    class="reveal spotlight-card md:col-span-1 p-8 glass rounded-3xl bg-gradient-to-br from-brand-primary/20 to-transparent border-brand-primary/20">
+                    <div class="flex flex-col items-center justify-center h-full text-center">
+                        <div class="text-4xl font-display font-bold text-white mb-1">10<span class="text-lg">mnt</span>
+                        </div>
+                        <div class="text-xs text-brand-primary uppercase tracking-widest font-bold">Dihemat Per Video
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Additional Features Grid -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="reveal spotlight-card glass p-6 rounded-2xl flex items-start gap-4">
+                    <div
+                        class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 shrink-0 text-xl">
+                        🔍</div>
+                    <div>
+                        <h3 class="text-base font-bold text-white mb-1">Optimasi SEO</h3>
+                        <p class="text-xs text-brand-muted">Optimalkan konten otomatis untuk mesin pencari. Dapatkan
+                            saran keyword dan insight peringkat.</p>
+                    </div>
+                </div>
+                <div class="reveal delay-100 spotlight-card glass p-6 rounded-2xl flex items-start gap-4">
+                    <div
+                        class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-400 shrink-0 text-xl">
+                        ⚡</div>
+                    <div>
+                        <h3 class="text-base font-bold text-white mb-1">Batch Processing</h3>
+                        <p class="text-xs text-brand-muted">Proses banyak video sekaligus. Hemat berjam-jam kerja manual
+                            dengan terjemahan dan optimasi massal.</p>
+                    </div>
+                </div>
+                <div class="reveal delay-200 spotlight-card glass p-6 rounded-2xl flex items-start gap-4">
+                    <div
+                        class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 shrink-0 text-xl">
+                        🔒</div>
+                    <div>
+                        <h3 class="text-base font-bold text-white mb-1">Privasi Terjaga</h3>
+                        <p class="text-xs text-brand-muted">Datamu tetap aman. Kami tidak menyimpan konten video atau
+                            API key di server kami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 bg-white/[0.01] border-y border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">Integrasi Mulus dengan YouTube
+                    Studio</h2>
+                <p class="text-brand-muted">Mulai dalam hitungan menit. Free trial 7 hari, lalu upgrade ke Lifetime.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="reveal spotlight-card glass p-8 rounded-3xl text-center relative">
+                    <div
+                        class="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold text-sm mx-auto mb-4">
+                        1</div>
+                    <div
+                        class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary text-3xl mt-4">
+                        📥
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Install & Aktifkan Trial</h3>
+                    <p class="text-brand-muted text-sm mb-4">Tambahkan extension ke Chrome dan aktifkan free trial 7
+                        hari.
+                        Pilih dari 6 provider AI termasuk Pollinations.ai (gratis tanpa API key!).</p>
+
+                </div>
+
+                <div class="reveal delay-100 spotlight-card glass p-8 rounded-3xl text-center relative">
+                    <div
+                        class="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold text-sm mx-auto mb-4">
+                        2</div>
+                    <div
+                        class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary text-3xl mt-4">
+                        ✨
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Generate Konten</h3>
+                    <p class="text-brand-muted text-sm mb-4">Buka video apapun di YouTube Studio. Gunakan panel AI untuk
+                        generate judul dan deskripsi yang dioptimalkan.</p>
+
+                </div>
+
+                <div class="reveal delay-200 spotlight-card glass p-8 rounded-3xl text-center relative">
+                    <div
+                        class="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold text-sm mx-auto mb-4">
+                        3</div>
+                    <div
+                        class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary text-3xl mt-4">
+                        🌍
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Go Global</h3>
+                    <p class="text-brand-muted text-sm mb-4">Buka menu Subtitles, pilih bahasa, dan biarkan AI
+                        menerjemahkan
+                        semuanya secara otomatis.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO TUTORIAL -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-bold mb-4">
+                    <i class="fa-solid fa-play"></i> Video Tutorial
+                </div>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-3">Lihat Langsung Cara Kerjanya</h2>
+                <p class="text-brand-muted max-w-xl mx-auto">Tonton tutorial singkat ini untuk melihat betapa mudahnya
+                    menggunakan YouTube Studio Assistant langsung di YouTube Studio.</p>
+            </div>
+
+            <div id="yt-player" class="reveal relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 cursor-pointer group"
+                onclick="loadYouTube()" style="aspect-ratio: 16/9;">
+                <img src="https://img.youtube.com/vi/-Vmn89P3HZQ/maxresdefault.jpg"
+                    alt="Tutorial YouTube Studio Assistant" class="w-full h-full object-cover">
+                <div
+                    class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                    <div
+                        class="w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center shadow-xl shadow-brand-primary/40 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function loadYouTube() {
+                    const player = document.getElementById('yt-player');
+                    player.innerHTML = '<iframe src="https://www.youtube.com/embed/-Vmn89P3HZQ?autoplay=1&rel=0&modestbranding=1" title="Tutorial YouTube Studio Assistant" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full rounded-2xl" style="aspect-ratio:16/9;"></iframe>';
+                    player.classList.remove('cursor-pointer');
+                }
+            </script>
+
+            <div class="mt-6 text-center">
+                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+                    target="_blank"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary hover:bg-brand-primary/80 text-white font-bold rounded-xl shadow-lg shadow-brand-primary/20 transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-chrome"></i> Coba Sekarang — Gratis 7 Hari
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section id="comparison" class="py-24 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">Kenapa Pilih Youtube Studio
+                    Assistant?</h2>
+                <p class="text-brand-muted">Lihat perbedaannya dengan cara kerja manual.</p>
+            </div>
+
+            <div class="reveal glass rounded-3xl overflow-hidden border border-white/5">
+                <table class="w-full comparison-table text-left">
+                    <thead>
+                        <tr class="bg-white/5">
+                            <th class="p-6 text-brand-muted font-medium text-sm uppercase tracking-wider">Aspek</th>
+                            <th class="p-6 text-brand-muted font-medium text-sm uppercase tracking-wider">Cara Manual
+                            </th>
+                            <th
+                                class="p-6 text-brand-primary font-bold text-sm uppercase tracking-wider bg-brand-primary/5">
+                                Youtube Studio Assistant</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr>
+                            <td class="p-6 text-white">Waktu buat Judul</td>
+                            <td class="p-6 text-brand-muted">Bolak-balik copy-paste dari ChatGPT</td>
+                            <td class="p-6 text-white font-bold bg-brand-primary/5">⚡ Beberapa detik</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-white">Terjemahan Metadata</td>
+                            <td class="p-6 text-brand-muted">Copy-paste Google Translate satu per satu</td>
+                            <td class="p-6 text-white font-bold bg-brand-primary/5">1 klik, 110+ bahasa</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-white">Optimasi SEO</td>
+                            <td class="p-6 text-brand-muted">Riset keyword manual</td>
+                            <td class="p-6 text-white font-bold bg-brand-primary/5">Otomatis + Saran Keyword</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-white">Biaya</td>
+                            <td class="p-6 text-brand-muted">Langganan ChatGPT Plus $20/bulan</td>
+                            <td class="p-6 text-white font-bold bg-brand-primary/5">🎁 Free Trial 7 Hari + Lifetime</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-white">Batch Processing</td>
+                            <td class="p-6 text-brand-muted">Satu per satu</td>
+                            <td class="p-6 text-white font-bold bg-brand-primary/5">Banyak video sekaligus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRIDGE 2 -->
+    <section class="py-20 bg-brand-primary/5 border-y border-brand-primary/10 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h3 class="text-3xl font-display font-bold text-white mb-4">Bayangkan... Go Global dari Sekarang.
+                    </h3>
+                    <p class="text-lg text-brand-muted">
+                        Dengan Youtube Studio Assistant dan 6 provider AI, kamu bisa menjangkau penonton di seluruh
+                        dunia
+                        hari
+                        ini juga. Generate, terjemahkan, dan publish — semua dalam hitungan menit. Coba gratis 7 hari!
+                    </p>
+                </div>
+                <div class="reveal delay-200">
+                    <div class="glass rounded-2xl overflow-hidden border border-white/10">
+                        <img src="../images/multi_language_translation.png" alt="Multi-Language Batch Translation"
+                            class="w-full" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-32 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-full bg-brand-primary/20 blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="reveal glass rounded-[3rem] p-1 md:p-1.5 border border-brand-primary/30 shadow-[0_0_50px_-10px_rgba(255,0,51,0.3)]">
+                <div class="bg-brand-surface rounded-[2.8rem] p-8 md:p-12 lg:p-16 text-center">
+                    <span class="text-brand-primary font-bold tracking-widest text-xs uppercase mb-2 block">Free Trial 7
+                        Hari — Tanpa Kartu Kredit</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-4">Mulai
+                        Tingkatkan<br>Channel-mu Sekarang 🚀</h2>
+                    <p class="text-brand-muted text-lg mb-10 max-w-xl mx-auto">
+                        Coba semua fitur gratis selama 7 hari. Lalu upgrade ke lisensi lifetime untuk akses permanen. 6
+                        provider AI, 110+ bahasa, tanpa batasan.
+                    </p>
+
+                    <div class="magnetic-wrap">
+                        <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+                            target="_blank"
+                            class="btn-shimmer inline-flex items-center justify-center text-white text-lg font-bold py-4 px-12 rounded-xl shadow-lg hover:shadow-brand-primary/50 transition-all transform hover:-translate-y-1 relative overflow-hidden group">
+                            <span class="relative z-10">Coba Gratis 7 Hari</span>
+                            <svg class="w-5 h-5 ml-2 relative z-10 group-hover:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center gap-6 mt-6 text-xs text-brand-muted">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Free Trial 7 Hari
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Lifetime License
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            6 Provider AI
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white/[0.01]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-3xl font-display font-bold text-white text-center mb-12">Pertanyaan yang Sering
+                Diajukan</h2>
+
+            <div class="space-y-4">
+                <div
+                    class="reveal group glass rounded-xl overflow-hidden border border-white/5 transition-all duration-300">
+                    <button
+                        class="w-full flex justify-between items-center p-5 text-left text-white font-medium focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span>Berapa biaya extension ini?</span>
+                        <span class="transform transition-transform duration-200 text-brand-primary">+</span>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-brand-muted text-sm">
+                        Kamu bisa mencoba semua fitur GRATIS selama 7 hari. Setelah itu, upgrade ke lisensi lifetime
+                        (sekali bayar, akses selamanya). Beberapa provider AI seperti Pollinations.ai juga 100% gratis
+                        tanpa API key.
+                    </div>
+                </div>
+
+                <div
+                    class="reveal group glass rounded-xl overflow-hidden border border-white/5 transition-all duration-300">
+                    <button
+                        class="w-full flex justify-between items-center p-5 text-left text-white font-medium focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span>AI provider apa saja yang didukung?</span>
+                        <span class="transform transition-transform duration-200 text-brand-primary">+</span>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-brand-muted text-sm">
+                        Kami mendukung 6 provider AI: <strong>Pollinations.ai</strong> (100% gratis, tanpa API key),
+                        <strong>Groq</strong> (gratis & super cepat), <strong>OpenRouter</strong> (banyak model gratis),
+                        <strong>Google Gemini</strong> (ada tier gratis), <strong>OpenAI</strong> (kualitas terbaik,
+                        GPT-4o), dan <strong>DeepSeek</strong> (opsi berbayar paling terjangkau). Bisa diganti kapan
+                        saja.
+                    </div>
+                </div>
+
+                <div
+                    class="reveal group glass rounded-xl overflow-hidden border border-white/5 transition-all duration-300">
+                    <button
+                        class="w-full flex justify-between items-center p-5 text-left text-white font-medium focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span>Apakah data video saya aman?</span>
+                        <span class="transform transition-transform duration-200 text-brand-primary">+</span>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-brand-muted text-sm">
+                        Ya, 100% aman. Kami tidak menyimpan konten video atau API key kamu di server kami. Semua
+                        pemrosesan dilakukan langsung di browser kamu.
+                    </div>
+                </div>
+
+                <div
+                    class="reveal group glass rounded-xl overflow-hidden border border-white/5 transition-all duration-300">
+                    <button
+                        class="w-full flex justify-between items-center p-5 text-left text-white font-medium focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span>Bagaimana cara kerjanya dengan YouTube Studio?</span>
+                        <span class="transform transition-transform duration-200 text-brand-primary">+</span>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-brand-muted text-sm">
+                        Setelah install extension, panel AI akan muncul secara otomatis di dalam YouTube Studio saat
+                        kamu mengedit video. Tinggal klik generate, dan konten siap digunakan langsung di sana.
+                    </div>
+                </div>
+
+                <div
+                    class="reveal group glass rounded-xl overflow-hidden border border-white/5 transition-all duration-300">
+                    <button
+                        class="w-full flex justify-between items-center p-5 text-left text-white font-medium focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span>Berapa banyak bahasa yang didukung?</span>
+                        <span class="transform transition-transform duration-200 text-brand-primary">+</span>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-brand-muted text-sm">
+                        Lebih dari 110 bahasa! Kamu bisa menerjemahkan judul, deskripsi, dan tag ke semua bahasa yang
+                        didukung YouTube secara otomatis dengan satu klik.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 bg-black py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-brand-primary rounded flex items-center justify-center">
+                            <span class="text-white font-bold text-xs">▶</span>
+                        </div>
+                        <span class="font-display font-bold text-white text-sm">Youtube Studio Assistant</span>
+                    </div>
+                    <p class="text-brand-muted text-xs leading-relaxed">Percepat workflow YouTube-mu dengan content
+                        generation bertenaga AI dan terjemahan multi-bahasa.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Produk</h4>
+                    <ul class="space-y-2 text-xs text-brand-muted">
+                        <li><a href="#features" class="hover:text-white transition-colors">Fitur</a></li>
+                        <li><a href="https://youtubestudioassistant.com/about.html"
+                                class="hover:text-white transition-colors">Tentang</a></li>
+                        <li><a href="https://youtubestudioassistant.com/team.html"
+                                class="hover:text-white transition-colors">Tim</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+                                target="_blank" class="hover:text-white transition-colors">Download Extension</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Resource</h4>
+                    <ul class="space-y-2 text-xs text-brand-muted">
+                        <li><a href="https://youtubestudioassistant.com/contact.html"
+                                class="hover:text-white transition-colors">Support</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+                                target="_blank" class="hover:text-white transition-colors">Chrome Web Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Legal</h4>
+                    <ul class="space-y-2 text-xs text-brand-muted">
+                        <li><a href="https://youtubestudioassistant.com/privacy.html"
+                                class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+                        <li><a href="https://youtubestudioassistant.com/terms.html"
+                                class="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-brand-muted text-xs text-center">
+                    &copy; 2025 PT. Hoybee Creativs Digital. Hak Cipta Dilindungi.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-brand-dark/90 backdrop-blur-md border-t border-white/10 p-4 z-50 md:hidden">
+        <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg"
+            target="_blank"
+            class="flex items-center justify-center w-full bg-brand-primary text-white font-bold py-3 rounded-xl shadow-lg">
+            Coba Gratis 7 Hari — Chrome Extension
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT INTERACTIONS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. SCROLL REVEAL OBSERVER
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // 2. SPOTLIGHT EFFECT
+            const cards = document.querySelectorAll('.spotlight-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+
+            // 3. MAGNETIC BUTTON
+            const magneticBtns = document.querySelectorAll('.magnetic-wrap');
+            magneticBtns.forEach((wrap) => {
+                const btn = wrap.querySelector('a');
+                wrap.addEventListener('mousemove', (e) => {
+                    const rect = wrap.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                });
+                wrap.addEventListener('mouseleave', () => {
+                    btn.style.transform = 'translate(0px, 0px)';
+                });
+            });
+
+            // 4. PROGRESS BAR ANIMATION
+            const newObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        bar.style.setProperty('--target-width', bar.dataset.target);
+                        bar.style.width = '0%';
+                        void bar.offsetWidth;
+                        bar.style.animation = 'progress-fill 1.5s ease-out forwards';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-progress-bar').forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+                bar.dataset.target = targetWidth;
+                newObserver.observe(bar);
+            });
+
+            const styleSheet = document.createElement("style");
+            styleSheet.innerText = `
+                @keyframes progress-fill {
+                    from { width: 0%; }
+                    to { width: var(--target-width); }
+                }
+            `;
+            document.head.appendChild(styleSheet);
+        });
+
+        // 5. FAQ TOGGLE
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span:last-child');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.innerText = '-';
+                button.parentElement.classList.add('border-brand-primary/30');
+            } else {
+                content.classList.add('hidden');
+                icon.innerText = '+';
+                button.parentElement.classList.remove('border-brand-primary/30');
+            }
+        }
+    </script>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" src="" alt="Preview">
+    </div>
+
+    <script>
+        // Image Lightbox
+        function openLightbox(src, alt) {
+            const overlay = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            img.alt = alt || 'Preview';
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox(e) {
+            if (e && e.target.tagName === 'IMG') return;
+            const overlay = document.getElementById('lightbox');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        // Auto-attach to all content images
+        document.querySelectorAll('section img:not([src*="picsum"])').forEach(img => {
+            img.classList.add('lightbox-trigger');
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+        });
+    </script>
+</body>
+
+</html>
