@@ -217,6 +217,34 @@
             transform: scale(1.1);
         }
     </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1253771853602207');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1253771853602207&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QFN4KJLS5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7QFN4KJLS5');
+    </script>
+
 </head>
 
 <body class="antialiased selection:bg-brand-red selection:text-white">
@@ -874,6 +902,24 @@
             img.addEventListener('click', () => openLightbox(img.src, img.alt));
         });
     </script>
+
+    <!-- Meta Pixel: AddToCart on CTA clicks -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="chromewebstore.google.com"]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                fbq('track', 'AddToCart', {
+                    content_name: 'YouTube Studio Assistant',
+                    content_category: 'Chrome Extension',
+                    content_type: 'product',
+                    value: 0,
+                    currency: 'USD'
+                });
+            });
+        });
+    });
+    </script>
+
 </body>
 
 </html>
