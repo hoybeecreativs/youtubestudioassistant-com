@@ -78,7 +78,7 @@ See [Deployment Guide](../netlify_deployment_guide.md) for detailed instructions
 ## 🤝 Contributing
 
 This is a private project for Hoybee Creativs. For questions or suggestions, contact:
-- Email: support@youtubestudioassistant.website
+- Email: support@youtubestudioassistant.com
 
 ## 📄 License
 

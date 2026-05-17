@@ -15,6 +15,6 @@ responsibilities:
   - "AI provider integration"
   - "Code quality and performance optimization"
   - "Technology decision-making"
-email: "support@youtubestudioassistant.website"
+email: "support@youtubestudioassistant.com"
 order: 1
 ---

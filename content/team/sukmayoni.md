@@ -15,6 +15,6 @@ responsibilities:
   - "User feedback and requirements gathering"
   - "Growth metrics and KPI tracking"
   - "Partnership and business development"
-email: "support@youtubestudioassistant.website"
+email: "support@youtubestudioassistant.com"
 order: 2
 ---

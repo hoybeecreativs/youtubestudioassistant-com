@@ -38,5 +38,5 @@ company_info:
   product_stage: "Production (v1.0.0 Launched)"
   target_market: "YouTube Creators Worldwide"
   website: "https://youtubestudioassistant.com"
-  contact_email: "support@youtubestudioassistant.website"
+  contact_email: "support@youtubestudioassistant.com"
 ---
