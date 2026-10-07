@@ -7,7 +7,7 @@ free_plan:
   features:
     - "Unlimited AI Generations"
     - "Unlimited Translations"
-    - "All AI Providers (Gemini, OpenAI, DeepSeek)"
+    - "All AI Providers (Claude, Gemini, OpenAI, Grok, DeepSeek, Groq, OpenRouter and more)"
     - "Advanced Title & Description"
     - "110+ Languages"
     - "Thumbnail Generator"
@@ -28,7 +28,7 @@ lifetime_plan:
   features:
     - "Unlimited AI Generations"
     - "Unlimited Translations"
-    - "All AI Providers (Gemini, OpenAI, DeepSeek)"
+    - "All AI Providers (Claude, Gemini, OpenAI, Grok, DeepSeek, Groq, OpenRouter and more)"
     - "Advanced Title & Description"
     - "110+ Languages"
     - "Thumbnail Generator"

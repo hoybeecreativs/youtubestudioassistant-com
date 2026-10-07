@@ -5,7 +5,7 @@ story_title: "Our Story"
 story_content: |
   YouTube Studio Assistant was born from a simple observation: content creators spend countless hours on repetitive tasks that could be automated. We saw talented creators struggling with language barriers, SEO optimization, and the time-consuming process of crafting perfect titles and descriptions.
 
-  Founded in August 2025 by Hoybee Creativs, we set out to build a tool that would democratize access to professional-grade content optimization. Our mission is to help every creator, regardless of their technical expertise or resources, reach a global audience.
+  Founded in August 2025 by PT. Hoybee Creativs Digital, we set out to build a tool that would democratize access to professional-grade content optimization. Our mission is to help every creator, regardless of their technical expertise or resources, reach a global audience.
 
   Today, YouTube Studio Assistant supports 110+ languages and integrates with multiple AI providers, helping creators save 30-60 minutes per video while expanding their reach to viewers worldwide.
 
@@ -35,7 +35,7 @@ company_info:
   founded: "August 21, 2025"
   location: "Indonesia"
   industry: "SaaS, Content Creation Tools, AI Technology"
-  product_stage: "Production (v1.0.0 Launched)"
+  product_stage: "Production (v1.5.1 live on the Chrome Web Store)"
   target_market: "YouTube Creators Worldwide"
   website: "https://youtubestudioassistant.com"
   contact_email: "support@youtubestudioassistant.com"

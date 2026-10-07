@@ -77,12 +77,12 @@ See [Deployment Guide](../netlify_deployment_guide.md) for detailed instructions
 
 ## 🤝 Contributing
 
-This is a private project for Hoybee Creativs. For questions or suggestions, contact:
+This is a private project for PT. Hoybee Creativs Digital. For questions or suggestions, contact:
 - Email: support@youtubestudioassistant.com
 
 ## 📄 License
 
-© 2025 PT. Hoybee Creativs Digital. All rights reserved.
+© 2025-2026 PT. Hoybee Creativs Digital. All rights reserved.
 
 ## 🔗 Links
 
@@ -92,4 +92,4 @@ This is a private project for Hoybee Creativs. For questions or suggestions, con
 
 ---
 
-**Built with ❤️ by Hoybee Creativs**
+**Built with ❤️ by PT. Hoybee Creativs Digital**
