@@ -3,207 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YouTube Studio Assistant Pricing - Simple and transparent pricing for YouTube creators. Start free or get lifetime access.">
-    <meta name="keywords" content="YouTube, Studio Assistant, Pricing, Free Trial, Lifetime Access">
+    <meta name="description" content="YouTube Studio Assistant pricing: try every feature free for 7 days, then get lifetime access with a one-time payment of $5.">
     <meta name="author" content="PT. Hoybee Creativs Digital">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://youtubestudioassistant.com/pricing.html">
     <title>Pricing - YouTube Studio Assistant</title>
-    
-    <!-- Open Graph / Facebook -->
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://youtubestudioassistant.com/pricing.html">
     <meta property="og:title" content="Pricing - YouTube Studio Assistant">
-    <meta property="og:description" content="Simple and transparent pricing for YouTube creators.">
+    <meta property="og:description" content="Free 7-day trial, then $5 one-time for lifetime access.">
     <meta property="og:image" content="https://youtubestudioassistant.com/images/hero-banner.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
-    <link rel="apple-touch-icon" href="/images/favicon-192x192.png">
-    
-    <!-- Google Fonts -->
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
-    
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 400px));
+            justify-content: center;
+            align-items: stretch;
+            gap: 2.5rem;
+            padding: 2rem 0;
+        }
+        .plans-grid .pricing-card {
+            max-width: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .plans-grid .pricing-card.plan-trial {
+            border-color: var(--light-gray);
+            box-shadow: var(--shadow);
+        }
+        .plans-grid .pricing-features { flex: 1; }
+        .plans-grid .pricing-card .btn { align-self: center; }
+        .plan-subtitle { color: var(--gray); margin: -0.75rem 0 1.5rem; }
+        .pricing-footnote { text-align: center; color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem; }
+        .faq-item h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.1rem; }
+        .faq-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+        @media (max-width: 480px) {
+            .plans-grid .pricing-card { padding: 2rem 1.5rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">YouTube Studio Assistant</a>
-                <ul class="nav-links">
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="btn btn-primary btn-small">Download Extension</a>
-                <button class="mobile-menu-btn">☰</button>
+            <a href="index.html" class="logo"><img src="images/favicon.png" alt="Logo" class="logo-icon">YouTube Studio Assistant</a>
+
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" class="nav-cta">Download Extension</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1>Simple, Transparent Pricing</h1>
-            <p>Choose the plan that's right for you. Start free, upgrade anytime.</p>
+            <p>Try every feature free for 7 days. Keep it forever with one payment.</p>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing-section">
+    <!-- Plans -->
+    <section class="content-section">
         <div class="container">
-            <div class="pricing-grid">
-                <!-- Free Trial Card -->
-                <div class="pricing-card">
+            <div class="plans-grid">
+                <!-- Free Trial -->
+                <div class="pricing-card plan-trial">
                     <h3>Free Trial</h3>
-                    <div class="price">
-                        <span class="amount">$0</span>
-                        <span class="period">/forever</span>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">for 7 days</span>
                     </div>
-                    <p class="pricing-description">Try all features for free, forever</p>
-                    
-                    <ul class="features-list">
-                        <li>✓ Unlimited AI Generations</li>
-                        <li>✓ Unlimited Translations</li>
-                        <li>✓ All AI Providers (Claude, Gemini, OpenAI, Grok, DeepSeek, Groq, OpenRouter and more)</li>
-                        <li>✓ Advanced Title & Description</li>
-                        <li>✓ 110+ Languages</li>
-                        <li>✓ Thumbnail Generator</li>
-                        <li>✓ Batch Translation</li>
-                        <li>✓ Priority Support</li>
-                        <li>✓ All Updates</li>
-                        <li>✓ Early Access to New Features</li>
-                        <li>✓ Commercial License</li>
+                    <p class="plan-subtitle">Free trial license key, no payment</p>
+
+                    <ul class="pricing-features">
+                        <li>✓ All features for 7 days</li>
+                        <li>✓ Title, description and tag suggestions</li>
+                        <li>✓ Translation into 110+ languages</li>
+                        <li>✓ Bulk translation</li>
+                        <li>✓ Thumbnail text tool</li>
+                        <li>✓ 9 AI providers, including a free one</li>
+                        <li>✓ 1 device</li>
                     </ul>
-                    
-                    <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="btn btn-secondary btn-full">Get Started Free</a>
+
+                    <a href="https://hoybee.myr.id/pl/youtube-studio-assistant-trial/" target="_blank" rel="noopener" class="btn btn-secondary">Get Free Trial Key</a>
                 </div>
 
-                <!-- Lifetime Card -->
-                <div class="pricing-card featured">
+                <!-- Lifetime -->
+                <div class="pricing-card">
                     <div class="pricing-badge">🔥 Best Value</div>
-                    <h3>Lifetime Access</h3>
-                    <div class="price">
-                        <span class="amount">$5</span>
-                        <span class="period">/one-time payment</span>
+                    <h3>Lifetime License</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">5</span>
+                        <span class="period">one-time</span>
                     </div>
-                    <p class="pricing-description">Support our development with a one-time payment</p>
-                    
-                    <ul class="features-list">
-                        <li>✓ Unlimited AI Generations</li>
-                        <li>✓ Unlimited Translations</li>
-                        <li>✓ All AI Providers (Claude, Gemini, OpenAI, Grok, DeepSeek, Groq, OpenRouter and more)</li>
-                        <li>✓ Advanced Title & Description</li>
-                        <li>✓ 110+ Languages</li>
-                        <li>✓ Thumbnail Generator</li>
-                        <li>✓ Batch Translation</li>
-                        <li>✓ Priority Support</li>
-                        <li>✓ All Updates</li>
-                        <li>✓ Early Access to New Features</li>
-                        <li>✓ Commercial License</li>
+                    <p class="pricing-note">Pay once, use forever</p>
+
+                    <ul class="pricing-features">
+                        <li>✓ Everything in the Free Trial</li>
+                        <li>✓ No expiration</li>
+                        <li>✓ Use on up to 2 devices</li>
+                        <li>✓ All future updates included</li>
+                        <li>✓ Email support</li>
+                        <li>✓ 30-day money-back guarantee</li>
                     </ul>
-                    
-                    <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="btn btn-primary btn-full">Get Lifetime Access</a>
+
+                    <!-- TODO: replace href with the Polar checkout link for the Lifetime product -->
+                    <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener" class="btn btn-primary" id="buyLifetimeBtn">Get Lifetime License</a>
                 </div>
             </div>
+
+            <p class="pricing-footnote">Prices in USD. Taxes may apply depending on your country.</p>
+            <p class="pricing-footnote">Paying from Indonesia? You can also buy through <a href="https://hoybee.myr.id/" target="_blank" rel="noopener">Mayar</a>.</p>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
+    <!-- FAQ -->
+    <section class="content-section" style="background: var(--light-gray);">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>How does the Free Trial work?</h3>
-                    <p>The Free Trial is completely free forever with ALL features included. You can use it to test the extension and see if it fits your workflow. No credit card required, no limitations!</p>
+                    <h3>How does the free trial work?</h3>
+                    <p>Get a free trial license key, install the extension, then paste the key in the extension popup and click <strong>Activate License</strong>. You get every feature for 7 days on one device. The trial can be used once per device.</p>
                 </div>
-                
+
                 <div class="faq-item">
-                    <h3>What's the difference between Free and Lifetime?</h3>
-                    <p>Both plans have identical features! The Lifetime plan is a way to support our development with a small one-time payment of $5. You get the same unlimited features either way.</p>
+                    <h3>What happens after the trial ends?</h3>
+                    <p>The features stop working until you activate a Lifetime License. Your settings stay saved, so you can continue right where you left off.</p>
                 </div>
-                
+
                 <div class="faq-item">
-                    <h3>What payment methods do you accept?</h3>
-                    <p>We accept all major credit cards, PayPal, and various local payment methods through our secure payment processor.</p>
+                    <h3>Do I need my own AI API key?</h3>
+                    <p>Not to get started. Pollinations is free and needs no key. For other providers, like Claude, Gemini, OpenAI or Grok, you add your own API key and pay that provider directly for what you use.</p>
                 </div>
-                
+
+                <div class="faq-item">
+                    <h3>How do I receive my license key?</h3>
+                    <p>Right after payment, your license key is sent to your email. Paste it into the extension popup and click <strong>Activate License</strong>.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I use it on more than one computer?</h3>
+                    <p>Yes. A Lifetime License works on up to 2 devices. You can deactivate a device in the extension settings to move your license to another one.</p>
+                </div>
+
                 <div class="faq-item">
                     <h3>Can I get a refund?</h3>
-                    <p>Yes! We offer a 30-day money-back guarantee for the Lifetime plan. If you're not satisfied, contact us at support@youtubestudioassistant.com for a full refund.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Do I need to provide my own API keys?</h3>
-                    <p>For the Free Trial with Gemini AI, no API key is needed. For Lifetime Access with OpenAI or DeepSeek, you'll need to provide your own API keys for those specific providers.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Why offer both Free and Lifetime if they're the same?</h3>
-                    <p>We believe in making our tools accessible to everyone. The Free plan ensures anyone can use all features. The Lifetime plan is for those who want to support our development and help us keep improving the extension!</p>
+                    <p>Yes. If you're not happy within 30 days of purchase, email <a href="mailto:support@youtubestudioassistant.com">support@youtubestudioassistant.com</a> and we'll refund you in full.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Save Time on Every Video?</h2>
+            <p>Install the extension and try every feature free for 7 days.</p>
+            <a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" class="btn btn-primary">Install the Extension</a>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Product</h4>
+                    <h3>YouTube Studio Assistant</h3>
+                    <p>Supercharge your YouTube workflow with AI-powered content generation and multi-language translation.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Product</h3>
                     <ul class="footer-links">
                         <li><a href="index.html#features">Features</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="team.html">Team</a></li>
+                        <li><a href="product.html">Product</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="changelog.html">Changelog</a></li>
-                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg" target="_blank" rel="noopener">Chrome Web Store</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/youtube-studio-assistant/gbhimfdbedcgofieikihfacihgblpcpg">Get Extension</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h3>Company</h3>
                     <ul class="footer-links">
-                        <li><a href="documentation.html">Documentation</a></li>
-                        <li><a href="contact.html">Support</a></li>
-                        <li><a href="#">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h4>Legal</h4>
+                    <h3>Legal</h3>
                     <ul class="footer-links">
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <p>PT. Hoybee Creativs Digital</p>
-                    <p>Email: support@youtubestudioassistant.com</p>
-                </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025-2026 PT. Hoybee Creativs Digital. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
